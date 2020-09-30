@@ -1,0 +1,1 @@
+_G.autoeatkey = "i" --change it to what ever you wantloadstring(game:HttpGet('https://pastebin.com/raw/c4p2vDhX',true))()

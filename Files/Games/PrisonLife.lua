@@ -1,0 +1,1 @@
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/RbxCheats/RbxCheats/master/Scripts/Prison%20Life%20GUI%20v3.0.lua'),true))()
