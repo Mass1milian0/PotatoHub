@@ -1,0 +1,11 @@
+local AssetsLoaded = falserepeat wait() until _G.Loaded == trueif not pcall(function()local ScreenGui = game:GetService("CoreGui").RePotatoHublocal Scripts = {BCreator = ScreenGui.ButtonCreator,BHandler = ScreenGui.ButtonHandler,MS = ScreenGui.Mainscript,MM = ScreenGui.MainModule}if game:GetService("Chat"):FindFirstChild("ChatFixer") thenendlocal MainFrame = ScreenGui.MainFrameAssetsLoaded = trueend) thenAssetsLoaded = falseendif AssetsLoaded then_G.on = 1
+
+_G.AutoUpgrade = true --Auto upgrades your character
+
+_G.MaxCash = 100000 --For auto upgrade
+--if your cash is below this number and autoupgrade is on 
+--then it won't upgrade your character
+
+_G.WT = .15 --Wait Time
+
+local plr = game.Players.LocalPlayerlocal char = plr.Characterfunction main()    for a,b in pairs(char.Noobbucket:GetChildren()) do         if b and b:FindFirstChild("Hit",true) and b:FindFirstChild("Healthbucket") and b.Healthbucket:FindFirstChildOfClass("IntValue") then            for i,v in pairs(plr.Items:GetChildren()) do				for _ = 1,3 do					local Event = b.Main.Hitpay					Event:FireServer()					local A_1 = v.Value * 2					local A_2 = Vector3.new(300.4915733, 100.8648129, 0.09178972)					local A_3 = v					local A_4 = "Hit"					local A_5 = Color3.new(1,1,1)					local Event = b:FindFirstChild("Hit",true)					Event:FireServer(A_1, A_2, A_3, A_4, A_5)				end            end        end    end	wait()    for i,v in pairs(char.Otherbucket:GetChildren()) do        if v then            for a,b in pairs(v:FindFirstChildOfClass("Model"):GetChildren()) do                 if b and b:FindFirstChild("Worth",true) then                    local A_1 = b:FindFirstChild("Worth",true).Value * 2                    local Event = v.Send                    Event:FireServer(A_1)                    b:Destroy()                end            end        end    end	if plr.Stats.Money.Value > _G.MaxCash then		repeat		wait()		local tbl_main = 		{			plr.Items[plr.Name]		}		game:GetService("Workspace").Ints.Upgrade:FireServer(unpack(tbl_main))		until plr.Stats.Money.Value <= _G.MaxCash	endendwhile _G.on == 1 do    pcall(main)    wait(_G.WT)endend
